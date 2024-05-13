@@ -1,7 +1,9 @@
 # typing_pratice
 
-TO start this project
+In we are using Django Framework.
+
+To start this project use this command
 '''
-npm run dev
+python manage.py runserver
 
 '''
