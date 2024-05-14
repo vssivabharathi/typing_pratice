@@ -18,17 +18,39 @@
         <a class="navbar-brand fw-bolder ">Typing Practice</a>
         <form class="form-inline">
         <!--Notification icons-->
-        <span class="material-symbols-outlined p-2">
-            notifications
-            </span>
+        <a class="btn btn-outline-info" href="#">
+            <span class="material-symbols-outlined" style="color: black; ">
+              Notifications
+              </span>
           <!--User Icon-->
-            <span class="material-symbols-outlined pe-3" >
-            person
-            </span>  
+          <a class="btn btn-outline-info" href="/sigininpage">
+            <span class="material-symbols-outlined" style="color: black; ">
+              person
+              </span>
+        </a>
         </form>
       </nav>
 </header>
 <body>
+
+{% for message in messages %}
+<div class="alert alert-{{ message.tags}} alert-dismissible fade show" role="alert">
+    <strong>message:</strong>{{ message}}
+    <button type="button" class="close" date-dimiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+</button>
+</div>
+{% endfor %}
+
+  
+
+
+{% if user.is_authenticated %}
+<h3>hello {{fname}}!</h3>
+<h4>You're Successfully Logged in.</h4>
+
+{% endif %}
+
     <div class="container">
         <h3>Learn Typing...</h3>
         <br>
@@ -57,11 +79,13 @@
         <button id="stop-button" class="hidden" style="background-color: rgb(233, 27, 27);">Stop Practice</button>
     </div>
 </div>
-<audio id="new-word-audio" src="new_word_sound.mp3"></audio>
-<audio id="correct-word-audio" src="correct_word_sound.mp3"></audio>
-<audio id="incorrect-letter-audio" src="incorrect_letter_sound.mp3"></audio>
-    
+<audio id="new-word-audio" src="../static/new_word_sound.mp3"></audio>
+<audio id="correct-word-audio" src="../static/correct_word_sound.mp3"></audio>
+<audio id="incorrect-letter-audio" src="../static/incorrect_letter_sound.mp3"></audio>
+
 </div>
+
+
 
 
 <script src="../static/script.js"></script>

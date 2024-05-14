@@ -22,8 +22,11 @@ from typingapp import templates
 
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('',views.index, name="index"),
+     path("sigininpage",views.sigininpage, name="sigininpage"),
+        path("signuppage",views.signuppage, name="signuppage"),
+       
 ]
 
 urlpatterns += staticfiles_urlpatterns()
