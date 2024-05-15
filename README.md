@@ -2,7 +2,7 @@
 
 Typing Master is a web application designed to help users improve their typing speed and accuracy. Whether you're a beginner looking to learn touch typing or an experienced typist aiming to boost your words-per-minute (WPM) rate.
 
-##Main Features:
+## Main Features:
 - User can see that the time interval words must be typed as displayed in the app window.
 - User can see the number of successful attempts and the number of total attempts in a score box.
 - User can click a 'Start Practice' button to start the practice session.
@@ -17,10 +17,10 @@ Typing Master is a web application designed to help users improve their typing s
 displayed, a word is correctly entered, or an incorrect letter is typed in
 the word.
 
-##Partially done feature:
+## Partially done feature:
 - User can log in to the app
 
-##Installation
+## Installation
 - Make sure you have Python installed. If not, you can download and install it from Python's official website.
 - Clone this repository to your local machine
   ```bash
@@ -40,7 +40,7 @@ the word.
    python manage.py migrate
   ```
 
-##Usage
+## Usage
 - Start the Django development server.
   ```bash 
   python manage.py runserver
@@ -48,7 +48,7 @@ the word.
 - Open a web browser and go to http://127.0.0.1:8000/ to view the application.
 
   
-##Contributing
+## Contributing
   
   If you want to contribute to this project, please follow these steps:
 - Fork this repository.
