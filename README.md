@@ -1,4 +1,4 @@
-# typing_pratice
+# typing_practice
 
 Typing Master is a web application designed to help users improve their typing speed and accuracy. Whether you're a beginner looking to learn touch typing or an experienced typist aiming to boost your words-per-minute (WPM) rate.
 
