@@ -32,7 +32,7 @@ the word.
   ```
 - Install Necessary packages.
   ```bash
-   pip install 'required thing'
+   pip install 'requirements.txt'
   ```
 - Create the necessary migration for the database
   ```bash
