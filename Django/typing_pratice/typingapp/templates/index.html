@@ -14,65 +14,67 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-light bg-info justify-content-between">
-        <a class="navbar-brand fw-bolder ">Typing Practice</a>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand fw-bolder">Typing Practice</a>
         <form class="form-inline">
-        <!--Notification icons-->
-        <a class="btn btn-outline-info" href="#">
-            <span class="material-symbols-outlined" style="color: black; ">
-              Notifications
-              </span>
-          <!--User Icon-->
-          <a class="btn btn-outline-info" href="/sigininpage">
-            <span class="material-symbols-outlined" style="color: black; ">
-              person
-              </span>
-        </a>
+            <!--home icons-->
+            <a class="btn btn-outline-warning" href="startuppage.html">
+                <span class="material-symbols-outlined" style="color: rgb(253, 253, 253);">
+                  Home
+                </span>
+            </a>
+            <!--Notification icons-->
+            <a class="btn btn-outline-warning" href="#">
+                <span class="material-symbols-outlined" style="color: white;">
+                  Notifications
+                </span>
+            </a>
+            <!--User Icon-->
+            <a class="btn btn-outline-warning" href="signinpage.html">
+                <span class="material-symbols-outlined" style="color: white;">
+                  person
+                </span>
+            </a>
         </form>
-      </nav>
+    </nav>
 </header>
 <body>
 
-{% for message in messages %}
-<div class="alert alert-{{ message.tags}} alert-dismissible fade show" role="alert">
-    <strong>message:</strong>{{ message}}
-    <button type="button" class="close" date-dimiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-</button>
-</div>
-{% endfor %}
-
-  
-
-
-{% if user.is_authenticated %}
-<h3>hello {{fname}}!</h3>
-<h4>You're Successfully Logged in.</h4>
-
-{% endif %}
 
     <div class="container">
         <h3>Learn Typing...</h3>
         <br>
-        <hr>
+    
+    <div class="output">
+        <p id= "timer" style="display: inline-block;"> Time: </p>
+        <div id="time" style="display: inline-block;">
+            <h1>0</h1>
+        </div>
+        <p id = "Wordsperminute" style="display: inline-block;">WPM: </p>
+        <div id="wpm" style="display:inline-block;">
+            <h1>0</h1>
+        </div>
+    </div>
+
+
     <div class="quote-container">
-       <h3>Start typing...</h3>
+       
         <p id="quote"></p>
-        <hr>
-        <input type="text" id="prompt-word" readonly style="text-align: center;">
+       <br>
+
+    <input type="text" id="prompt-word" readonly style="text-align: center;">
     </div>
     <input type="text" id="input" placeholder="Type the text here">
-    <span id="try-again-message" class="hidden " style="display: block;">Try again...</span>
-    <span id="congratulations-message" class="hidden" >
-        Congratulations!
-    </span>
-    <div id="results"></div>
+    
+
+    <span id="try-again-message" class="hidden" style="display: none;">Try again...</span>
+        <span id="congratulations-message" class="hidden"> Congratulations!</span>
+   
     <div id="score-box">
         <p id="running-time"></p>
-
-
         <span id="successful-attempts">Successful attempts: 0</span>
         <span id="total-attempts">Total attempts: 0</span>
+
     </div>
     <div id="buttons">
         <button id="start-button" style="background-color: green;">Start Practice</button>
@@ -89,5 +91,6 @@
 
 
 <script src="../static/script.js"></script>
+
 </body>
 </html> 

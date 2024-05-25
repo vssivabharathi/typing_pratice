@@ -1,0 +1,49 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+    background-color: #212121;
+    color: #eeeeee; /* Ensure the text color contrasts with the dark background */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(81, 81, 81, 0.753); /* Darker background with some transparency */
+    padding: 20px;
+    border-radius: 10px;
+    color: #eeeeee; /* Ensure the text color contrasts with the container background */
+}
+
+.easy-btn, .hard-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #eeeeee; /* Light text color for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.easy-btn {
+    background-color: #29bb89; /* Green for easy button */
+}
+
+.hard-btn {
+    background-color: #e84545; /* Red for hard button */
+}
+
+.easy-btn:hover {
+    background-color: #116400; /* Darker green on hover */
+    color: #eeeeee; /* Maintain light text color on hover */
+}
+
+.hard-btn:hover {
+    background-color: #690000; /* Darker red on hover */
+    color: #eeeeee; /* Maintain light text color on hover */
+}

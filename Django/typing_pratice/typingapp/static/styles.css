@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(199, 239, 255);
+    font-family: 'Source Code Pro', monospace;
+    background-color: #212121;
     margin: 0;
     padding: 0;
 }
@@ -9,14 +9,31 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #e7f5ff;
+    color: #eeeeee;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjusted for a semi-transparent black background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+#timer, #Wordsperminute {
+    color: #ffd369;
+    }
+#timer {
+    left: 20px;
+}
+#Wordsperminute {
+    right: 20px;
+}
+#time{
+    padding-right:50% ;
+    color:darkgrey;
+}
+#wpm{
+    
+    color:darkgrey;
+}
 h1 {
     text-align: center;
-    color: #333;
+    color: #eeeeee;
 }
 
 .quote-container {
@@ -27,33 +44,45 @@ h1 {
 #quote {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #eeeeee;
     margin-bottom: 10px;
 }
 
 #prompt-word {
     font-size: 18px;
-    color: #666;
+    color: #ffd369;
 }
 
 input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffd369;
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
+    background-color: #000;
+    color: #eeeeee;
 }
 
-#try-again-message, #congratulations-message {
+#try-again-message {
     display: block;
     text-align: center;
     margin-top: 10px;
     font-size: 18px;
-    color: #ff3333;
+    color: #a10000; /* Red for error or attention messages */
     font-weight: bold;
 }
+
+#congratulations-message{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: darkgreen; /* Red for error or attention messages */
+    font-weight: bold;
+}
+
 
 .hidden {
     display: none;
@@ -63,7 +92,7 @@ input[type="text"] {
     margin-top: 20px;
     text-align: center;
     font-size: 18px;
-    color: #666;
+    color: #666; /* Gray for results text */
 }
 
 #score-box {
@@ -72,7 +101,7 @@ input[type="text"] {
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
-    color: #666;
+    color: #666; /* Gray for score text */
 }
 
 #buttons {
@@ -82,8 +111,8 @@ input[type="text"] {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
+    color: #212121;
+    background-color: #ffd369;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -91,7 +120,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #e0b751;
 }
 
 .hidden {

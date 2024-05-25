@@ -3,7 +3,14 @@ const quotes = [
     "A journey of a thousand miles begins with a single step.",
     "To be or not to be, that is the question.",
     "All that glitters is not gold.",
-    "In the midst of chaos, there is also opportunity."
+    "In the midst of chaos, there is also opportunity.",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    "The only way to do great work is to love what you do.",
+    "The future belongs to those who believe in the beauty of their dreams.",
+    "It does not matter how slowly you go as long as you do not stop.",
+    "Believe you can and you're halfway there.",
+    "The only limit to our realization of tomorrow will be our doubts of today.",
+    "It is never too late to be what you might have been."
 ];
 
 let successfulAttempts = 0;
@@ -86,54 +93,56 @@ function startPractice() {
     let prevWordEndTime = startTime;
 
     newWordAudio.play();
-
     input.oninput = function(e) {
         const typedText = input.value.trim();
         const currentTypedWord = typedText.split(" ").pop();
         const currentPromptWord = words[wordIndex];
-        
+    
         if (currentTypedWord === currentPromptWord) {
-            
             highlightWord(wordIndex, true);
             input.value = ""; 
             wordIndex++; 
+            document.getElementById("try-again-message").classList.add("hidden");
+    
             if (wordIndex < words.length) {
-              
                 promptWordInput.value = words[wordIndex];
                 correctWordAudio.play(); 
             } else {
-          
                 successfulAttempts++;
                 totalAttempts++;
                 clearInterval(runningTimeInterval);
                 const endTime = new Date().getTime();
                 const totalTime = (endTime - startTime) / 1000;
                 const wpm = Math.round((currentQuote.split(" ").length / totalTime) * 60);
+    
                 document.getElementById("successful-attempts").textContent = `Successful attempts: ${successfulAttempts}`;
                 document.getElementById("total-attempts").textContent = `Total attempts: ${totalAttempts}`;
-                document.getElementById("results").innerHTML = `Time: ${totalTime} seconds | Speed: ${wpm} WPM`;
+                document.getElementById("time").innerHTML = `<h1> ${totalTime} <h1/> `;
+                document.getElementById("wpm").innerHTML = `<h1> ${wpm}<h1/> `;
                 document.getElementById("congratulations-message").classList.remove("hidden");
+    
                 setTimeout(() => {
                     document.getElementById("congratulations-message").classList.add("hidden");
                     startPractice(); 
                 }, 2000);
             }
         } else if (currentPromptWord.startsWith(currentTypedWord)) {
-           
-            highlightWord(wordIndex, false); 
+            highlightWord(wordIndex, false);
         } else {
-          
             highlightWord(wordIndex, false);
             input.classList.add("flash");
+    
             setTimeout(() => {
                 input.classList.remove("flash");
                 input.value = ""; 
             }, 500);
+    
             document.getElementById("try-again-message").classList.remove("hidden");
             document.getElementById("congratulations-message").classList.add("hidden"); 
             incorrectLetterAudio.play(); 
         }
     };
+    
 
     input.onkeydown = function(e) {
         if (e.key === "Backspace" && input.value === "") {
