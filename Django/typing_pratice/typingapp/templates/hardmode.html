@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--bootstrap 5.0.2 cdn-->
@@ -11,6 +12,9 @@
     <title>Practice Homepage</title>
     <link rel="stylesheet" href="../static/hardmode.css">
 </head>
+<style>
+    
+</style> 
 
 <body>
     <header>   
@@ -18,7 +22,7 @@
             <a class="navbar-brand fw-bolder">Typing Practice</a>
             <form class="form-inline">
                 <!--home icons-->
-                <a class="btn btn-outline-warning" href="startuppage.html">
+                <a class="btn btn-outline-warning" href="/index">
                     <span class="material-symbols-outlined" style="color: rgb(253, 253, 253);">
                       Home
                     </span>
@@ -30,7 +34,7 @@
                     </span>
                 </a>
                 <!--User Icon-->
-                <a class="btn btn-outline-warning" href="signinpage.html">
+                <a class="btn btn-outline-warning" href="/sigininpage.html">
                     <span class="material-symbols-outlined" style="color: white;">
                       person
                     </span>
@@ -75,5 +79,8 @@
         </div>
     </div>
     <script src="../static/hardmode.js"></script>
+    <footer>
+        &copy; 2024 Typing Practice | Developed by Sivabharathi
+    </footer>
 </body>
 </html>

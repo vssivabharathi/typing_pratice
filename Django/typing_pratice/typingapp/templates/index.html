@@ -1,96 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--bootstarp 5 .02 cdn-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
        <!--Google fonts-->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   
-   <link rel="stylesheet" href="../static/styles.css">
-
-   <title>Typing Practice</title>
+    <title>Practice Homepage</title>
+    <link rel="stylesheet" href="{% static 'startuppage.css'%}">
+        
 </head>
-
-<header>
-    <nav class="navbar navbar-dark bg-dark justify-content-between">
-        <a class="navbar-brand fw-bolder">Typing Practice</a>
-        <form class="form-inline">
-            <!--home icons-->
-            <a class="btn btn-outline-warning" href="startuppage.html">
-                <span class="material-symbols-outlined" style="color: rgb(253, 253, 253);">
-                  Home
-                </span>
-            </a>
-            <!--Notification icons-->
-            <a class="btn btn-outline-warning" href="#">
-                <span class="material-symbols-outlined" style="color: white;">
-                  Notifications
-                </span>
-            </a>
-            <!--User Icon-->
-            <a class="btn btn-outline-warning" href="signinpage.html">
-                <span class="material-symbols-outlined" style="color: white;">
-                  person
-                </span>
-            </a>
-        </form>
-    </nav>
-</header>
+<style>
+    .info{
+        padding-top: 5px;
+        background-color: #212121
+    }
+    footer {
+            text-align: center;
+         
+            padding: 20px 0;
+            background-color: #212121;
+            color: #f1bb06;
+        }
+</style>
 <body>
 
+    <header>   
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand fw-bolder">Typing Practice</a>
+            <form class="form-inline">
+                <!--home icons-->
+                <a class="btn btn-warning" href="index" >
+                    <span class="material-symbols-outlined" style="color: rgb(253, 253, 253);">
+                      Home
+                    </span>
+                </a>
+                <!--Notification icons-->
+                <a class="btn btn-outline-warning" href="#">
+                    <span class="material-symbols-outlined" style="color: white;">
+                      Notifications
+                    </span>
+                </a>
+                <!--User Icon-->
+                <a class="btn btn-outline-warning" href="sigininpage">
+                    <span class="material-symbols-outlined" style="color: white;">
+                      person
+                    </span>
+                </a>
+            </form>
+        </nav>
+    </header>
 
+    <div class="info">
+    <h1 style="color: goldenrod; display: inline-block;">Welcome, </h1>
+    <b>
+    <h1 class="user" style="color:rgb(207, 165, 57); display: inline-block;">newuser</h1>
+</b>
+</div>
+    <div class="page">
+
+
+
+   <br>
     <div class="container">
-        <h3>Learn Typing...</h3>
-        <br>
-    
-    <div class="output">
-        <p id= "timer" style="display: inline-block;"> Time: </p>
-        <div id="time" style="display: inline-block;">
-            <h1>0</h1>
-        </div>
-        <p id = "Wordsperminute" style="display: inline-block;">WPM: </p>
-        <div id="wpm" style="display:inline-block;">
-            <h1>0</h1>
+
+
+        <h1>Start Practice</h1>
+        <div>
+            <a href="/easy" class="easy-btn">Easy Mode</a>
+            <a href="/hardmode" class="hard-btn">Hard Mode</a>
         </div>
     </div>
-
-
-    <div class="quote-container">
-       
-        <p id="quote"></p>
-       <br>
-
-    <input type="text" id="prompt-word" readonly style="text-align: center;">
-    </div>
-    <input type="text" id="input" placeholder="Type the text here">
-    
-
-    <span id="try-again-message" class="hidden" style="display: none;">Try again...</span>
-        <span id="congratulations-message" class="hidden"> Congratulations!</span>
-   
-    <div id="score-box">
-        <p id="running-time"></p>
-        <span id="successful-attempts">Successful attempts: 0</span>
-        <span id="total-attempts">Total attempts: 0</span>
-
-    </div>
-    <div id="buttons">
-        <button id="start-button" style="background-color: green;">Start Practice</button>
-        <button id="stop-button" class="hidden" style="background-color: rgb(233, 27, 27);">Stop Practice</button>
-    </div>
 </div>
-<audio id="new-word-audio" src="../static/new_word_sound.mp3"></audio>
-<audio id="correct-word-audio" src="../static/correct_word_sound.mp3"></audio>
-<audio id="incorrect-letter-audio" src="../static/incorrect_letter_sound.mp3"></audio>
-
-</div>
-
-
-
-
-<script src="../static/script.js"></script>
-
+<footer>
+    &copy; 2024 Typing Practice | Developed by Sivabharathi
+</footer>
 </body>
-</html> 
+</html>

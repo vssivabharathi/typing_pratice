@@ -3,11 +3,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
     margin: 0;
     font-family: 'Source Code Pro', monospace;
     background-color: #212121;
     color: #eeeeee; /* Ensure the text color contrasts with the dark background */
+}
+
+footer {
+    text-align: center;
+ 
+    padding: 20px 0;
+    background-color: #212121;
+    color: #f1bb06;
 }
 
 .container {

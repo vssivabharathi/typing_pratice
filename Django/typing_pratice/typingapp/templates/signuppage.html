@@ -1,5 +1,6 @@
 <html>
   <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +22,7 @@
         <a class="navbar-brand fw-bolder">Typing Practice</a>
         <form class="form-inline">
             <!--home icons-->
-            <a class="btn btn-outline-warning" href="startuppage.html">
+            <a class="btn btn-outline-warning" href="/index">
                 <span class="material-symbols-outlined" style="color: rgb(253, 253, 253);">
                   Home
                 </span>
@@ -33,7 +34,7 @@
                 </span>
             </a>
             <!--User Icon-->
-            <a class="btn btn-outline-warning" href="signinpage.html">
+            <a class="btn btn-warning" href="/sigininpage">
                 <span class="material-symbols-outlined" style="color: white;">
                   person
                 </span>
@@ -46,14 +47,14 @@
  <!-- Background image -->
  <div class="p-5 bg-image" style="
  background-color: grey;
- background-image: url('../static/msgkeyboard.gif');
+ background-image: url('{% static 'msgkeyboard.gif' %}');
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center center;
  position: relative;
  width: 100%;
  height: 300px;
-"></div>
+"></div>>
 
   <!-- Background image -->
 
@@ -116,8 +117,8 @@
             </div>
 
             <!-- Submit button -->
-            <a href="sigininpage.html">
-            <button type="submit" class="btn btn-warning btn-block mb-4" href="sigininpage.html">
+            <a href="/sigininpage.html">
+            <button type="submit" class="btn btn-warning btn-block mb-4" href="/sigininpage">
               Sign up
             </button>
         </a>
@@ -129,6 +130,9 @@
     </div>
   </div>
 </section>
+<footer>
+  &copy; 2024 Typing Practice | Developed by Sivabharathi
+</footer>
 <!-- Section: Design Block -->
   </body>
 </html>

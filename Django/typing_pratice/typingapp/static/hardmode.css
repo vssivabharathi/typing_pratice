@@ -3,6 +3,13 @@ html{
    
   }
   
+  footer {
+    text-align: center;
+ 
+    padding: 20px 0;
+    background-color: #212121;
+    color: #f1bb06;
+}
   body{
     font-family: 'Source Code Pro', monospace;
     background: #212121;
