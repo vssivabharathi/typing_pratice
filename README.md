@@ -43,7 +43,7 @@ Typing Master is a web application designed to help users improve their typing s
   ```
 - Install Necessary packages.
   ```bash
-   pip install 'requirements.txt'
+   pip install -r 'requirements.txt'
   ```
 - Create the necessary migration for the database
   ```bash
