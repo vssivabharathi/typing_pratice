@@ -82,6 +82,6 @@ If you want to contribute to this project, please follow these steps:
    git  push origin feature_branch
 ```
 #DEMO VIDEO
-[[website.webp]((https://github.com/vssivabharathi/typing_pratice/assets/144824242/7a6a5a65-0780-49af-9770-16f44f11c25e)
-)
-))
+[website.webp](https://github.com/vssivabharathi/typing_pratice/assets/144824242/7a6a5a65-0780-49af-9770-16f44f11c25e)
+
+
