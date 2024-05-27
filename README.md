@@ -39,7 +39,7 @@ Typing Master is a web application designed to help users improve their typing s
   ```
 - Activate the Virtualenv.
   ```bash
-   source venv/bin/activate
+   source .env/bin/activate
   ```
 - Install Necessary packages.
   ```bash
