@@ -81,3 +81,5 @@ If you want to contribute to this project, please follow these steps:
 ```bash
    git  push origin feature_branch
 ```
+#DEMO VIDEO
+[website.webp](https://github.com/vssivabharathi/typing_pratice/tree/main/Django/typing_pratice/typingapp/static/website.webm)
