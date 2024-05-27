@@ -22,7 +22,11 @@
     footer {
             text-align: center;
          
-            padding: 20px 0;
+            padding:  20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
             background-color: #212121;
             color: #f1bb06;
         }
@@ -32,6 +36,8 @@
     <header>   
         <nav class="navbar navbar-dark bg-dark justify-content-between">
             <a class="navbar-brand fw-bolder">Typing Practice</a>
+
+  
             <form class="form-inline">
                 <!--home icons-->
                 <a class="btn btn-warning" href="index" >
@@ -58,12 +64,12 @@
     <div class="info">
     <h1 style="color: goldenrod; display: inline-block;">Welcome, </h1>
     <b>
-    <h1 class="user" style="color:rgb(207, 165, 57); display: inline-block;">newuser</h1>
+    <h1 class="user" style="color:rgb(207, 165, 57); display: inline-block;">{{ user.first_name }}</h1>
 </b>
 </div>
     <div class="page">
-
-
+        <h1>Welcome to Typing Practice</h1>
+      
 
    <br>
     <div class="container">
@@ -74,10 +80,25 @@
             <a href="/easy" class="easy-btn">Easy Mode</a>
             <a href="/hardmode" class="hard-btn">Hard Mode</a>
         </div>
+       
     </div>
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      <br>
+      </div>
+    </div>
+    
+
 </div>
+   
+
+</body>
 <footer>
     &copy; 2024 Typing Practice | Developed by Sivabharathi
 </footer>
-</body>
 </html>

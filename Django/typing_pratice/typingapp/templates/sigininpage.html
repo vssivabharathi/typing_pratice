@@ -17,6 +17,7 @@
   </style>
   </head>
   <body>
+    {% csrf_token %}
 
     <header>
       <nav class="navbar navbar-dark bg-dark justify-content-between">
@@ -69,19 +70,21 @@
             <h1 style="font-family: lucida calligraphy;">Typing Practices</h1>
             <hr>
           <h2 class="fw-bold mb-5">Sign in now</h2>
-          <form>
+          <form method="POST" action="{% url 'sigininpage' %}">
             <!-- 2 column grid layout with text inputs for the first and last names -->
           
 
-            <!-- Email input -->
+            <!-- username input -->
             <div class="form-outline mb-4">
-              <input type="email" id="email" name="email" class="form-control" placeholder="abc@anything.com"/>
-              <label class="form-label" for="form3Example3">Email address</label>
+            
+                <input type="user" id="username" name="username" class="form-control"  placeholder="@Username"/>
+                <label class="form-label" for="form3Example3">Username</label>
+             
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="pass1" name="pass1" class="form-control" placeholder="Enter 8 character password"/>
+              <input type="password" id="pass1" name="password" class="form-control" placeholder="Enter 8 character password"/>
               <label class="form-label" for="form3Example4">Password</label>
             </div>
 
