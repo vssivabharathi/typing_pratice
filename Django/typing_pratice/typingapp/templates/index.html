@@ -15,6 +15,11 @@
         
 </head>
 <style>
+  
+.messages .success {
+    color: white;
+}
+
     body{
         background-color: #212121;
     }
@@ -35,6 +40,10 @@
             right: 0;
             background-color: #212121;
             color: #f1bb06;
+        }
+        .scroll_down{
+            text-align: center;
+            padding-top: 10px;
         }
 </style>
 <body>
@@ -63,6 +72,14 @@
                       person
                     </span>
                 </a>
+                {% if user.is_authenticated %}
+                <!-- Logout Icon -->
+                <a class="btn btn-outline-warning" href="{% url 'logout' %}">
+                    <span class="material-symbols-outlined" style="color: white;">
+                        logout
+                    </span>
+                </a>
+            {% endif %}
             </form>
         </nav>
     </header>
@@ -93,8 +110,16 @@
             </ul>
             <hr style="color: goldenrod;">
 </div>
+<div class="scroll_down">
+<h6 style="color: whitesmoke;">
+<span class="material-symbols-outlined" style="text-align: center; color: white;">
+    keyboard_arrow_down
+    </span>
+    <p>scroll down</p>
+</h6>
+</div>
     <div class="page">
-        <h1>Welcome to Typing Practice</h1>
+        <h1 style="color: honeydew;">Welcome to Typing Practice</h1>
       
 
    <br>

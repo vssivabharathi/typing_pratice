@@ -31,7 +31,7 @@ urlpatterns = [
     path('hardmode', views.hardmode, name='hardmode'),
     path('sigininpage', views.sigininpage, name='sigininpage'),
     path('signuppage', views.signuppage, name='signuppage'),
-  
+    path('logout', views.logout_view, name='logout'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
