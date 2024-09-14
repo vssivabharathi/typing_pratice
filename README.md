@@ -84,5 +84,5 @@ If you want to contribute to this project, please follow these steps:
 #DEMO VIDEO
 [website.mp4](https://github.com/vssivabharathi/typing_pratice/assets/144824242/7a6a5a65-0780-49af-9770-16f44f11c25e)
 
-# Click the link to preview
-[click_here](Sivabharathi.pythonanywhere.com)
+[Click the link to preview](https://sivabharathi.pythonanywhere.com)
+
