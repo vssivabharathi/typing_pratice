@@ -1,6 +1,7 @@
 # typing_practice
 
 Typing Master is a web application designed to help users improve their typing speed and accuracy. Whether you're a beginner looking to learn touch typing or an experienced typist aiming to boost your words-per-minute (WPM) rate.
+[Click the link to preview](https://sivabharathi.pythonanywhere.com)
 
 ## Main Features:
 
@@ -84,5 +85,5 @@ If you want to contribute to this project, please follow these steps:
 #DEMO VIDEO
 [website.mp4](https://github.com/vssivabharathi/typing_pratice/assets/144824242/7a6a5a65-0780-49af-9770-16f44f11c25e)
 
-[Click the link to preview](https://sivabharathi.pythonanywhere.com)
+
 
